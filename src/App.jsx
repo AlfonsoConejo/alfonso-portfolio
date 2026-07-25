@@ -39,7 +39,7 @@ function App() {
     };
   }, []);
   
-  const [language, setLanguage] = useState("es");
+  const [language, setLanguage] = useState("en");
   const dictionary = translations[language];
 
   return (

@@ -79,7 +79,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
 
             {/* Language Toogle */}
             <div className="relative flex items-center bg-white/5 backdrop-blur-sm rounded-full p-1">
-              {["es", "en"].map((lang) => (
+              {["en", "es"].map((lang) => (
                 <button
                   key={lang}
                   onClick={() => setLanguage(lang)}

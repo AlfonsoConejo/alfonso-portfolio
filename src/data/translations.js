@@ -26,13 +26,19 @@ const translations = {
     },
     projects:{
       title: 'Proyectos',
-      description: 'Una selección de proyectos donde he aplicado mis conocimientos de desarrollo frontend y backend, creando aplicaciones completas con interfaces intuitivas, lógica de negocio y soluciones pensadas para usuarios reales.',
+      description: 'Una selección de proyectos donde he aplicado mis conocimientos creando aplicaciones completas.',
+      featuresTitle: "Características",
 
       items: {
         kitab: {
           title: "Kitab - Agenda Escolar",
-          description: "A complete academic planner application designed to help students organize their schedules, subjects, and academic activities.",
-          technologies: "React, Node.js, PostgreSQL, Tailwind",
+          description: "Kitab es una agenda escolar diseñada para ayudar a los estudiantes a organizar su vida académica. Permite gestionar periodos académicos, donde cada uno incluye materias, horarios de clase, tareas, vacaciones y otros recursos académicos.",
+          technologies: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS", "JWT", "bcrypt"],
+          features: [
+            "Autenticación con JWT mediante cookies HTTP-Only y sistema de refresh tokens almacenados en PostgreSQL.",
+            "Gestión de periodos académicos, mostrando únicamente la información del periodo seleccionado por el usuario.",
+            "Administración de materias y horarios de clase con personalización mediante colores."
+          ],
           demoButton: "Demo",
           githubButton: "GitHub",
         }
@@ -67,13 +73,19 @@ const translations = {
     },
     projects:{
       title: 'Projects',
-      description: 'A selection of projects where I have applied my frontend and backend skills, building complete applications with intuitive interfaces, business logic, and solutions designed for real users.',
-    
+      description: 'A selection of projects where I have applied my skills by building complete applications.',
+      featuresTitle: "Features",
+
       items: {
         kitab: {
           title: "Kitab - Student planner",
-          description: "A complete academic planner application designed to help students organize their schedules, subjects, and academic activities.",
-          technologies: "React, Node.js, PostgreSQL, Tailwind",
+          description: "Kitab is a student planner designed to help students organize their academic life. It allows users to manage academic periods, each containing subjects, class schedules, assignments, vacations, and other academic resources.",
+          technologies: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS", "JWT", "bcrypt"],
+          features: [
+            "JWT authentication using HTTP-only cookies with a refresh token system stored in PostgreSQL.",
+            "Academic period management, displaying only the information for the user’s selected period.",
+            "Subject and class schedule management with customizable color labels."
+          ],
           demoButton: "Demo",
           githubButton: "GitHub",
         }
