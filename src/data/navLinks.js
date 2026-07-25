@@ -1,6 +1,5 @@
 const links = [
   { id: "home" },
-  { id: "about" },
   { id: "skills" },
   { id: "experience" },
   { id: "projects" },
