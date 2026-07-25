@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import translations from './data/translations.js';
-import Hero from './components/Hero.jsx';
-import './App.css'
-import Skills from './components/Skills.jsx';
 import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import Skills from './components/Skills.jsx';
+import Projects from './components/Projects.jsx';
+import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -53,6 +54,7 @@ function App() {
       <div className='w-full max-w-6xl mx-auto px-4'>
         <Hero lang={dictionary}/> 
         <Skills dictionary={dictionary}/> 
+        <Projects dictionary={dictionary}/> 
       </div>
 
       

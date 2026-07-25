@@ -1,13 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import links from "../data/navLinks";
 
 export default function Header({dictionary, language, setLanguage, activeSection}) {
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   console.log(activeSection);
 
   return(
-    <header className='fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md py-3 sm:py-4'>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md py-3 sm:py-4 
+      ${scrolled 
+        ? "bg-background/70 border-b border-sky-600/10" 
+        : "border-b border-transparent"
+      }`}
+    >
       <div className='w-full px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto flex items-center justify-between'>
           <div className="flex items-center gap-3">

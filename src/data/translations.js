@@ -23,6 +23,20 @@ const translations = {
       databases: "Bases de datos",
       devops: "DevOps",
       deployment: "Despliegue",
+    },
+    projects:{
+      title: 'Proyectos',
+      description: 'Una selección de proyectos donde he aplicado mis conocimientos de desarrollo frontend y backend, creando aplicaciones completas con interfaces intuitivas, lógica de negocio y soluciones pensadas para usuarios reales.',
+
+      items: {
+        kitab: {
+          title: "Kitab - Agenda Escolar",
+          description: "A complete academic planner application designed to help students organize their schedules, subjects, and academic activities.",
+          technologies: "React, Node.js, PostgreSQL, Tailwind",
+          demoButton: "Demo",
+          githubButton: "GitHub",
+        }
+      }
     }
   },
 
@@ -50,6 +64,20 @@ const translations = {
       databases: "Databases",
       devops: "DevOps",
       deployment: "Deployment",
+    },
+    projects:{
+      title: 'Projects',
+      description: 'A selection of projects where I have applied my frontend and backend skills, building complete applications with intuitive interfaces, business logic, and solutions designed for real users.',
+    
+      items: {
+        kitab: {
+          title: "Kitab - Student planner",
+          description: "A complete academic planner application designed to help students organize their schedules, subjects, and academic activities.",
+          technologies: "React, Node.js, PostgreSQL, Tailwind",
+          demoButton: "Demo",
+          githubButton: "GitHub",
+        }
+      }
     }
   }
 };
