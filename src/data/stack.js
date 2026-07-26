@@ -41,7 +41,7 @@ const stack = {
         name: 'Express.js', icon: express
       },
       php: {
-        name: 'php', icon: php
+        name: 'PHP', icon: php
       }
     }
     

@@ -11,12 +11,12 @@ export default function Projects({dictionary}) {
     <section
       id="projects"
       className="
+        scroll-mt-24
         flex flex-col
         items-center
         justify-center
         relative
-        pt-20
-        pb-12
+        pb-18
       "
     >
       <SectionTitle>

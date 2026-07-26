@@ -26,6 +26,30 @@ const translations = {
       devops: "DevOps",
       deployment: "Despliegue y Nube",
     },
+    experience: {
+      title: "Experiencia",
+      subtitle: "Mi trayectoria como desarrollador de software.",
+      achievementsTitle: "Logros",
+
+      items: {
+        easysoft: {
+          title: "Easysoft",
+          position: "Desarrollador Full Stack",
+          achievements: [
+            "Optimicé la sincronización de datos entre cliente y servidor mediante estrategias de transferencia selectiva.",
+            "Rediseñé y normalicé estructuras de bases de datos SQL para mejorar la integridad de los datos y simplificar consultas complejas.",
+            "Implementé un sistema seguro de recuperación de contraseña utilizando URLs cifradas con expiración temporal.",
+            "Integré flujos de actualización asíncrona mediante AJAX, eliminando recargas completas de página y mejorando el rendimiento."
+          ],
+          technologies: [
+            "Java",
+            "JavaScript",
+            "PHP",
+            "AJAX"
+          ]
+        },
+      }
+    },
     projects:{
       title: 'Proyectos',
       description: 'Una selección de proyectos donde he aplicado mis conocimientos creando aplicaciones completas.',
@@ -82,6 +106,30 @@ const translations = {
       databases: "Databases",
       devops: "DevOps",
       deployment: "Deployment & Cloud",
+    },
+    experience: {
+      title: "Experience",
+      subtitle: "My journey as a software developer.",
+      achievementsTitle: "Achievements",
+
+      items: {
+        easysoft: {
+          title: "Easysoft",
+          position: "Full Stack Developer",
+          achievements: [
+            "Optimized local-server data synchronization by implementing selective data transfer strategies.",
+            "Redesigned and normalized SQL database structures to improve data integrity and simplify complex queries.",
+            "Implemented a secure password recovery system with encrypted and time-limited URLs.",
+            "Integrated asynchronous update flows using AJAX, eliminating full page reloads and improving performance."
+          ],
+          technologies: [
+            "Java",
+            "JavaScript",
+            "PHP",
+            "AJAX"
+          ]
+        },
+      }
     },
     projects:{
       title: 'Projects',

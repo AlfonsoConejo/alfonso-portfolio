@@ -10,12 +10,12 @@ export default function Contact({ dictionary }) {
     <section
       id="contact"
       className="
+				scroll-mt-24
         flex flex-col
         items-center
         justify-center
         relative
-        pt-20
-        pb-12
+        pb-18
       "
     >
       <SectionTitle>
@@ -106,7 +106,7 @@ export default function Contact({ dictionary }) {
 
 
               <a
-                href="https://www.linkedin.com/in/alfonso-conejo/"
+                href="https://www.linkedin.com/in/alfonso-conejo"
                 target="_blank"
                 className="
                   flex items-center gap-4
@@ -126,7 +126,7 @@ export default function Contact({ dictionary }) {
                     LinkedIn
                   </p>
                   <p className="text-white">
-                    https://www.linkedin.com/in/alfonso-conejo/
+                    https://www.linkedin.com/in/alfonso-conejo
                   </p>
                 </div>
               </a>

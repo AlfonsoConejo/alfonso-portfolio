@@ -13,7 +13,7 @@ export default function Hero({lang}) {
         justify-center
         relative
         pt-40
-        pb-12
+        pb-18
       "
     >
       <div className="w-full mx-auto">
