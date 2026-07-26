@@ -1,0 +1,37 @@
+export default function Experience({ dictionary }) {
+  return (
+    <section
+      id="experience"
+      className="
+        flex
+        items-center
+        justify-center
+        relative
+        pt-40
+        pb-12
+      "
+    >
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+      HOOOOOLA
+    </section>
+  )
+}

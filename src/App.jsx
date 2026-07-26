@@ -4,6 +4,8 @@ import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
+import Experience from './components/Experience.jsx';
 import './App.css'
 
 function App() {
@@ -37,7 +39,13 @@ function App() {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
+
+    console.log(
+      entry.target.id,
+      entry.isIntersecting
+    );
   }, []);
+
   
   const [language, setLanguage] = useState("en");
   const dictionary = translations[language];
@@ -54,7 +62,9 @@ function App() {
       <div className='w-full max-w-6xl mx-auto px-4'>
         <Hero lang={dictionary}/> 
         <Skills dictionary={dictionary}/> 
-        <Projects dictionary={dictionary}/> 
+        <Experience dictionary={dictionary}/>
+        <Projects dictionary={dictionary}/>
+        <Contact dictionary={dictionary}/> 
       </div>
 
       

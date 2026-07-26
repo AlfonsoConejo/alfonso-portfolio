@@ -1,3 +1,5 @@
+import { MessageSquare } from "lucide-react";
+
 const translations = {
   es: {
     header: {
@@ -22,7 +24,7 @@ const translations = {
       backend: "Backend",
       databases: "Bases de datos",
       devops: "DevOps",
-      deployment: "Despliegue",
+      deployment: "Despliegue y Nube",
     },
     projects:{
       title: 'Proyectos',
@@ -43,6 +45,16 @@ const translations = {
           githubButton: "GitHub",
         }
       }
+    },
+    contact: {
+      title: "Contáctame",
+      subtitle: "Construyamos algo juntos.",
+      message: "Actualmente estoy en búsqueda de nuevas oportunidades. Si te interesa colaborar, tienes alguna pregunta o simplemente quieres saludar, no dudes en ponerte en contacto conmigo.",
+      email: "Correo",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+      phone: "Teléfono",
+      resume: "Descargar CV"
     }
   },
 
@@ -69,7 +81,7 @@ const translations = {
       backend: "Backend",
       databases: "Databases",
       devops: "DevOps",
-      deployment: "Deployment",
+      deployment: "Deployment & Cloud",
     },
     projects:{
       title: 'Projects',
@@ -90,6 +102,16 @@ const translations = {
           githubButton: "GitHub",
         }
       }
+    },
+    contact: {
+      title: "Contact Me",
+      subtitle: "Let's build something together.",
+      message: "I'm currently looking for new opportunities. Feel free to reach out if you'd like to collaborate, have a question, or just say hello.",
+      email: "Email",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+      phone: "Phone",
+      resume: "Download Resume"
     }
   }
 };
