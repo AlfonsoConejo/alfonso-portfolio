@@ -14,15 +14,9 @@ function App() {
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
 
-    console.log(sections);
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(
-            entry.target.id,
-            entry.isIntersecting
-          );
 
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
@@ -39,11 +33,7 @@ function App() {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-
-    console.log(
-      entry.target.id,
-      entry.isIntersecting
-    );
+    
   }, []);
 
   

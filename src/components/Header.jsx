@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import links from "../data/navLinks";
+import { useClickOutside } from "../hooks/useClickOutside";
 
 
 export default function Header({dictionary, language, setLanguage, activeSection}) {
 
+  const menuButtonRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  useClickOutside(menuButtonRef, () => {setIsOpen(false)});
 
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
@@ -28,20 +32,18 @@ export default function Header({dictionary, language, setLanguage, activeSection
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-    const handleBreakpointChange = (e) => {
-      if (e.matches && isOpen) {
+    const handleResize = (e) => {
+      if (e.matches) {
         setIsOpen(false);
       }
     };
 
-    mediaQuery.addEventListener("change", handleBreakpointChange);
+    mediaQuery.addEventListener("change", handleResize);
 
     return () => {
-      mediaQuery.removeEventListener("change", handleBreakpointChange);
+      mediaQuery.removeEventListener("change", handleResize);
     };
   }, []);
-
-  console.log(activeSection);
 
   return(
     <header
@@ -58,7 +60,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
         }
       `}
     >
-      <div className='w-full px-4 sm:px-6 lg:px-8'>
+      <div className='w-full px-4 sm:px-6 lg:px-8' ref={menuButtonRef}>
         <div className='max-w-6xl mx-auto flex items-center justify-between gap-3'>
           <div className="flex items-center gap-3">
             <div className="
@@ -186,7 +188,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
                   <a
                     href={`#${link.id}`}
                     onClick={() => setIsOpen(false)}
-                    className="block py-3 text-gray-200 hover:text-white transition-colors"
+                    className={`block py-3 text-gray-400 font-semibold hover:text-gray-200 transition-colors ${activeSection === link.id ? 'text-sky-700' : 'text-gray-400'}`}
                   >
                     {dictionary.header[link.id]}
                   </a>

@@ -117,7 +117,7 @@ export default function Projects({dictionary}) {
 
               <ul className='list-disc pl-5 space-y-3'>
                 {dictionary.projects.items.kitab.features.map((feature) => (
-                  <li className='text-gray-300'>
+                  <li key={feature} className='text-gray-300'>
                     {feature}
                   </li>
                 ))} 

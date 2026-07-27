@@ -72,7 +72,7 @@ export default function Experience({ dictionary }) {
             <ul className="list-disc pl-5 space-y-3 text-base md:text-lg text-gray-300">
               {/* Achievements */
                 dictionary.experience.items.easysoft.achievements.map((achievement) => (
-                  <li className="list-disc pl-5 space-y-3 text-base md:text-lg text-gray-300">
+                  <li key={achievement} className="list-disc pl-5 space-y-3 text-base md:text-lg text-gray-300">
                     {achievement}
                   </li>
                 ))
