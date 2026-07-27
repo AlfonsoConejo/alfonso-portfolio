@@ -60,7 +60,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
         }
       `}
     >
-      <div className='w-full px-4 sm:px-6 lg:px-8' ref={menuButtonRef}>
+      <div className='w-full px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto flex items-center justify-between gap-3'>
           <div className="flex items-center gap-3">
             <div className="
@@ -143,6 +143,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
             {/* Mobile menu */}
             <div className="relative flex justify-center items-center md:hidden bg-white/5 backdrop-blur-sm rounded-full p-1">
               <button
+                ref={menuButtonRef}
                 className="flex items-center justify-center rounded-full p-1 cursor-pointer"
                 onClick={toggleMenu}
                 aria-label="Open menu"
@@ -174,30 +175,32 @@ export default function Header({dictionary, language, setLanguage, activeSection
         </div>
       </div>
 
-      {isOpen && (
-        <motion.div 
-          className="absolute left-0 top-full w-full z-40"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-        >
-          <div className="bg-zinc-900/95 backdrop-blur-xl px-4 sm:px-6 lg:px-8 border-b border-sky-600/10">
-            <ul className="max-w-6xl mx-auto py-4">
-              {links.map((link) => (
-                <li key={link.id}>
-                  <a
-                    href={`#${link.id}`}
-                    onClick={() => setIsOpen(false)}
-                    className={`block py-3 text-gray-400 font-semibold hover:text-gray-200 transition-colors ${activeSection === link.id ? 'text-sky-700' : 'text-gray-400'}`}
-                  >
-                    {dictionary.header[link.id]}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            className="absolute left-0 top-full w-full z-40"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+          >
+            <div className="bg-zinc-900/95 backdrop-blur-xl px-4 sm:px-6 lg:px-8 border-b border-sky-600/10">
+              <ul className="max-w-6xl mx-auto py-4">
+                {links.map((link) => (
+                  <li key={link.id}>
+                    <a
+                      href={`#${link.id}`}
+                      onClick={() => setIsOpen(false)}
+                      className={`block py-3 text-gray-400 font-semibold hover:text-gray-200 transition-colors ${activeSection === link.id ? 'text-sky-700' : 'text-gray-400'}`}
+                    >
+                      {dictionary.header[link.id]}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }
