@@ -65,9 +65,7 @@ function App() {
         <Experience dictionary={dictionary}/>
         <Projects dictionary={dictionary}/>
         <Contact dictionary={dictionary}/> 
-      </div>
-
-      
+      </div>      
       
     </div>
   )
