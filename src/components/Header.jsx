@@ -62,7 +62,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
     >
       <div className='w-full px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto flex items-center justify-between gap-3'>
-          <div className="flex items-center gap-3">
+          <a className="flex items-center gap-3" href="#home">
             <div className="
               w-8 h-8
               rounded-xl
@@ -79,7 +79,7 @@ export default function Header({dictionary, language, setLanguage, activeSection
             <span className="font-hand text-text-h font-semibold text-xl">
               Alfonso
             </span>
-          </div>
+          </a>
 
           <nav className='flex items-center justify-center'>
             {/* Nav Links */}
